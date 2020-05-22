@@ -1,4 +1,9 @@
-// Array.prototype.map
+Array.prototype.map     = function(callback, thisArg = this){
+    return this.reduce((result, el, i, arr) => {
+        result.push(callback.call(thisArg, el, i, arr));
+        return result;
+    }, [])
+}
 Array.prototype.filter  = function(callback, thisArg = this){
     return this.reduce((result, el, i, arr) => {
         if(callback.call(thisArg, el, i, arr)) result.push(el);
