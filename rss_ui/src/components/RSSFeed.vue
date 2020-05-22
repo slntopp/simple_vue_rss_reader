@@ -5,7 +5,7 @@
             <a-row>
                 <a-col :span="12" v-for="post in feedPage" :key="post.id" style="margin-top: 10px">
                     <a-row type="flex" justify="center">
-                        <a-card hoverable style="width: 95%" @click="handleCardClick">
+                        <a-card hoverable style="width: 95%" @click="handleCardClick(post.link)">
                             <a-card-meta :title="post.title" :description="'Author: ' + post.author">
                             </a-card-meta>
                         </a-card>
@@ -44,8 +44,8 @@ export default {
         }
     },
     methods: {
-        handleCardClick(e){
-            console.log(e);
+        handleCardClick(url){
+            window.open(url, '_blank');
         }
     },
 }

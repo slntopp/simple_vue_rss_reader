@@ -51,10 +51,6 @@ import RSSFeed from "./components/RSSFeed";
 import RSSResourceCard from "./components/RSSResourceCard";
 import Parser from "rss-parser";
 
-// const CORS_PROXY = "";
-// const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-const CORS_PROXY = "https://cors-everywhere.mylivn-challenge.slnt-opp.xyz/";
-
 export default {
   name: 'App',
   components: {
@@ -70,8 +66,9 @@ export default {
   },
   methods: {
     async handleSubmit(){
-      let feed = await this.parser.parseURL(CORS_PROXY + this.form.url);
+      let feed = await this.parser.parseURL('/cors?url=' + this.form.url);
       this.feed = feed.items;
+      console.dir(this.feed);
       this.resource = feed;
     }
   },
