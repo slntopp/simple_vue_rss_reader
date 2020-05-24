@@ -49,7 +49,7 @@ export default {
   },
   data(){
     return {
-      form: { url: 'https://codepen.io/picks/feed/' },
+      form: { url: '' },
       resource: { empty: true },
       feed: [],
       parser: new Parser()
@@ -59,7 +59,6 @@ export default {
     async handleSubmit(){
       let feed = await this.parser.parseURL('/cors?url=' + this.form.url);
       this.feed = feed.items;
-      console.dir(this.feed);
       this.resource = feed;
     }
   },
