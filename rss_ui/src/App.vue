@@ -38,15 +38,6 @@
 </template>
 
 <script>
-import Vue from 'vue';
-
-import { FormModel, PageHeader, Input, Button, Icon } from 'ant-design-vue';
-Vue.use(PageHeader);
-Vue.use(FormModel);
-Vue.use(Input);
-Vue.use(Button);
-Vue.use(Icon);
-
 import RSSFeed from "./components/RSSFeed";
 import RSSResourceCard from "./components/RSSResourceCard";
 import Parser from "rss-parser";

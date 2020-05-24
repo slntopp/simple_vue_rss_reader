@@ -2,11 +2,25 @@
     <div>
         <a-empty v-if="feed.length == 0" description="No feed were given or feed is empty."/>
         <template v-else>
-            <a-row>
+            <a-row id="feed">
                 <a-col :span="12" v-for="post in feedPage" :key="post.id" style="margin-top: 10px">
                     <a-row type="flex" justify="center">
                         <a-card hoverable style="width: 95%" @click="handleCardClick(post.link)">
-                            <a-card-meta :title="post.title" :description="'Author: ' + post.author">
+                            <a-card-meta :title="post.title">
+                                <template slot="description">
+                                    <a-row>
+                                        <p v-html="post.content" />
+                                    </a-row>
+                                    <a-row type="flex" align="middle">
+                                        <a-col :span="4">
+                                            <p><b> Posted </b></p>
+                                        </a-col>
+                                        <a-col :span="12">
+                                            <p v-if="post.creator">by <b> {{ post.creator }} </b></p>
+                                            <p>on {{ (new Date(post.isoDate)).getDateOnly() }} </p>
+                                        </a-col>
+                                    </a-row>
+                                </template>
                             </a-card-meta>
                         </a-card>
                     </a-row>
@@ -20,12 +34,11 @@
 </template>
 
 <script>
-import Vue from "vue";
-
-import { Empty, Pagination, Card } from "ant-design-vue";
-Vue.use(Empty);
-Vue.use(Pagination);
-Vue.use(Card);
+Date.prototype.getDateOnly = function(){
+    return [
+        this.getDate(), this.getMonth() + 1, this.getFullYear()
+    ].join('/')
+}
 
 export default {
     props: {
@@ -50,3 +63,10 @@ export default {
     },
 }
 </script>
+
+<style>
+#feed img {
+    max-height: 160px!important;
+    width: auto;
+}
+</style>
