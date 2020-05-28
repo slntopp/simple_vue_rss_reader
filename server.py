@@ -19,4 +19,4 @@ def cors_everywhere():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(port=os.environ.get('PORT', 8000))
+    app.run(port=os.environ.get('PORT'))
