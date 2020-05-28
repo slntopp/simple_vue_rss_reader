@@ -1,8 +1,5 @@
 FROM node:lts-alpine as build-stage
 
-CMD ["/bin/sleep", "120"]
-
-ADD public /app/public
 ADD rss_ui /app/rss_ui
 
 WORKDIR /app/rss_ui
