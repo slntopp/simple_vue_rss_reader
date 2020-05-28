@@ -1,5 +1,10 @@
 module.exports = {
   outputDir: '/app/public',
   assetsDir: './',
-  publicPath: '/static/'
+  publicPath: '/static/',
+  productionSourceMap: false,
+
+  css: {
+    extract: false
+  }
 }
