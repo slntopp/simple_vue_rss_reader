@@ -2,7 +2,7 @@ FROM node:lts-alpine as build-stage
 
 WORKDIR /app
 
-COPY public .
+COPY ./public .
 COPY rss_ui .
 
 WORKDIR /app/rss_ui
