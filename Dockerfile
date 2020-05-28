@@ -1,9 +1,7 @@
 FROM node:lts-alpine as build-stage
 
-WORKDIR /app
-
-COPY ./public .
-COPY rss_ui .
+ADD public /app/public
+ADD rss_ui /app/rss_ui
 
 WORKDIR /app/rss_ui
 RUN npm install
