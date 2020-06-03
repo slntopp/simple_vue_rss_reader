@@ -1,4 +1,6 @@
-# mylivn_challenge
+# RSS Reader
+
+*Little remark: this is my solution made as a challenge for one public company, so repo name was changed to make it harder to be found with search engines*
 
 This repo(same as challenge) consists of two parts:
 1. JS Array methods implementations
