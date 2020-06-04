@@ -18,3 +18,4 @@ jobs:
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         HOST: app.cloud.slnt-opp.xyz
         PROJECT: rss-reader
+        PORT: 52222
