@@ -6,9 +6,6 @@ WORKDIR /app/rss_ui
 RUN npm install
 RUN npm run build
 
-# RUN ls public
-# COPY public .
-
 FROM python:3.8 as production-stage
 WORKDIR /app
 COPY requirements.txt .
