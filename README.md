@@ -8,7 +8,7 @@ This repo(same as challenge) consists of two parts:
 You can find them in array.js file. Nothing to add here ^^
 
 ## 2. RSS Feed UI
-The working web-application can be found at [mylivn-challenge.slnt-opp.xyz](https://mylivn-challenge.slnt-opp.xyz)
+The working web-application can be found at [rss-reader.slnt-opp.xyz](https://rss-reader.slnt-opp.xyz)
 
 But if you wan't to run it by yourself, you can either just:
 
