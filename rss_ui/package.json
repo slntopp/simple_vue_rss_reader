@@ -10,6 +10,7 @@
   "dependencies": {
     "ant-design-vue": "^1.7.5",
     "core-js": "^3.13.0",
+    "css-what": "^5.0.1",
     "dns-packet": "^5.2.4",
     "highlight.js": "^10.7.2",
     "is-svg": "^4.3.1",
