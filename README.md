@@ -21,8 +21,8 @@ OR
 
 1. clone this repo
 2. `cd rss_ui`
-3. `npm install`
-4. `npm run build`
+3. `yarn`
+4. `yarn build`
 5. install requirements with `pip install -r requirements.txt`
 6. go back to app root
 7. `python server.py`

@@ -3,8 +3,8 @@ FROM node:lts-alpine as build-stage
 ADD rss_ui /app/rss_ui
 
 WORKDIR /app/rss_ui
-RUN npm install
-RUN npm run build
+RUN yarn
+RUN yarn build
 
 FROM python:3.8 as production-stage
 WORKDIR /app
